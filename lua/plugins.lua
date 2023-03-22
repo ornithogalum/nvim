@@ -36,4 +36,15 @@ return require("packer").startup(function(use)
 		}
 	}
 
+	use {
+		"glepnir/galaxyline.nvim",
+		config = function()
+			require("custom/galaxyline")
+		end,
+		requires = {
+			"nvim-tree/nvim-web-devicons",
+			opt = true
+		}
+	}
+
 end)
