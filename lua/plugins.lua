@@ -67,4 +67,15 @@ return require("packer").startup(function(use)
   		}
 	}
 
+	use {
+		"startup-nvim/startup.nvim",
+		config = function()
+			require("startup").setup({ theme = "evil" })
+		end,
+		requires = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim"
+		}
+	}
+
 end)
