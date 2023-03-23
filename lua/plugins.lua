@@ -19,6 +19,9 @@ return require("packer").startup(function(use)
 
 	use {
 		"nvim-telescope/telescope.nvim",
+		config = function()
+			require("custom/telescope")
+		end,
 		requires = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
