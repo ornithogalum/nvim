@@ -71,14 +71,13 @@ return require("packer").startup(function(use)
 	}
 
 	use {
-		"startup-nvim/startup.nvim",
-		config = function()
-			require("startup").setup({ theme = "evil" })
-		end,
+		"goolord/alpha-nvim",
 		requires = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-lua/plenary.nvim"
-		}
+			"nvim-tree/nvim-web-devicons"
+		},
+		config = function()
+			require("custom/alpha")
+		end
 	}
 
 end)
